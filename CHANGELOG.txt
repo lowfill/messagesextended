@@ -1,0 +1,15 @@
+Version 1.4
+	Replaced multisuggest for libforms_util autosuggest
+		
+Version 1.3
+	Add Option setting to send messages to multiple recipients (Need MultiSuggest Plugin)
+
+Version 1.2
+	Add Option setting for enable or disable the TinyMCE plugin in messages.
+
+Version 1.1
+	Compatible with Elgg 1.5
+	Removes messages notification handler in favor of notification handler provided in Elgg 1.5.
+
+Version 1.0
+	Initial Release

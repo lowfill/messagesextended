@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin_manifest>
+        <field key="author" value="Diego Andrés Ramírez Aragón - Daniel Aristizabal Romero" />
+        <field key="version" value="1.4" />
+        <field key="description" value="Elgg internal messages plugin extensions.&lt;br&gt; 
+        If you want send messages to multiple recipients need install &lt;b&gt;libform_utils&lt;/b&gt; Plugin" />
+        <field key="website" value="http://www.somosmas.org/" />
+        <field key="copyright" value="(C) Diego Andrés Ramírez Aragón 2010" />
+		<field key="licence" value="GNU Public License version 2" />
+		<field key="recommends" value="libform_utils" />
+		<field key="elgg_version" value="2010071002" />
+</plugin_manifest>

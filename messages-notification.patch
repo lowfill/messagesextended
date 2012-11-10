@@ -1,0 +1,22 @@
+Index: send.php
+===================================================================
+--- send.php	(revision 700)
++++ send.php	(working copy)
+@@ -83,7 +83,9 @@
+ 							$CONFIG->wwwroot . "pg/messages/" . $user->username,
+ 							$_SESSION['user']->name,
+ 							$CONFIG->wwwroot . "mod/messages/send.php?send_to=" . $_SESSION['user']->getGUID()
+-						)
++						),
++						NULL,
++						"email"
+ 			); 
+ 			
+         // Success message
+@@ -95,4 +97,4 @@
+         } // end of message check if statement
+      
+     
+-?>
+\ No newline at end of file
++?>

@@ -1,0 +1,49 @@
+Index: actions/addtogroup.php
+===================================================================
+--- actions/addtogroup.php	(revision 2554)
++++ actions/addtogroup.php	(working copy)
+@@ -51,7 +51,7 @@
+ 								notify_user($user->getGUID(), $group->owner_guid, 
+ 									sprintf(elgg_echo('groups:welcome:subject'), $group->name), 
+ 									sprintf(elgg_echo('groups:welcome:body'), $user->name, $group->name, $group->getURL()),
+-									NULL, "email");
++									NULL);
+ 									
+ 								system_message(elgg_echo('groups:addedtogroup'));
+ 								
+@@ -86,7 +86,7 @@
+ 						if (notify_user($user->getGUID(), $group->owner_guid, 
+ 								sprintf(elgg_echo('groups:invite:subject'), $user->name, $group->name), 
+ 								sprintf(elgg_echo('groups:invite:body'), $user->name, $group->name, "{$CONFIG->url}action/groups/join?user_guid={$user->guid}&group_guid={$group->guid}"),
+-								NULL, "email"))
++								NULL))
+ 							system_message(elgg_echo("groups:userinvited"));
+ 						else
+ 							register_error(elgg_echo("groups:usernotinvited"));
+@@ -99,4 +99,4 @@
+ 	}
+ 			
+ 	forward($forward_url);
+-?>
+\ No newline at end of file
++?>
+Index: actions/joinrequest.php
+===================================================================
+--- actions/joinrequest.php	(revision 2554)
++++ actions/joinrequest.php	(working copy)
+@@ -75,7 +75,7 @@
+ 			if (notify_user($group->owner_guid, $user->getGUID(), 
+ 					sprintf(elgg_echo('groups:request:subject'), $user->name, $group->name), 
+ 					sprintf(elgg_echo('groups:request:body'), $group->getOwnerEntity()->name, $user->name, $group->name, $user->getURL(), "{$CONFIG->url}action/groups/addtogroup?user_guid={$user->guid}&group_guid={$group->guid}"),
+-					NULL, "email"))
++					NULL))
+ 				system_message(elgg_echo("groups:joinrequestmade"));
+ 			else
+ 				register_error(elgg_echo("groups:joinrequestnotmade"));
+@@ -88,4 +88,4 @@
+ 		
+ 	forward($_SERVER['HTTP_REFERER']);
+ 	exit;	
+-?>
+\ No newline at end of file
++?>
