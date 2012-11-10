@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin_manifest>
-        <field key="author" value="Diego Andrés Ramírez Aragón - Daniel Aristizabal Romero" />
-        <field key="version" value="1.4" />
-        <field key="description" value="Elgg internal messages plugin extensions.&lt;br&gt; 
-        If you want send messages to multiple recipients need install &lt;b&gt;libform_utils&lt;/b&gt; Plugin" />
-        <field key="website" value="http://www.somosmas.org/" />
-        <field key="copyright" value="(C) Diego Andrés Ramírez Aragón 2010" />
-		<field key="licence" value="GNU Public License version 2" />
-		<field key="recommends" value="libform_utils" />
-		<field key="elgg_version" value="2010071002" />
+<plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
+    <name>Messages extended</name>
+    <author>Diego Andrés Ramírez Aragón - Daniel Aristizabel Romero</author>
+    <version>2.0</version>
+    <category>communication</category>
+    <description>Improvements to  Elgg internal messages plugin.</description>
+    <website>https://github.com/lowfill/messagesextended</website>
+    <license>GNU General Public License version 2</license>
+    <requires>
+        <type>elgg_release</type>
+        <version>1.8</version>
+    </requires>
+    <requires>
+        <type>plugin</type>
+        <name>messages</name>
+    </requires>
+    <suggests>
+        <type>plugin</type>
+        <name>libform_utils</name>
+        <version>0.5</version>
+    </suggests>
+    <activate_on_install>true</activate_on_install>
 </plugin_manifest>

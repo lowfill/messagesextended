@@ -12,6 +12,8 @@ $english = array(
     'messagesextended:settings:false'=>"Disable",
 	'messagesextended:settings:multiple'=> "Send messages to multiple recipients.",
     'messagesextended:settings:nomultisuggest'=>"Install MultiSuggest plugin for send messages to multiple recipients.",
+		
+	'messages:choose:group' => "Select group",	
 );
 
 add_translation("en",$english);
