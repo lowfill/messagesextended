@@ -67,7 +67,8 @@ elseif (elgg_is_active_plugin('autocomplete')) {
 	}
 	if(empty($recipient_guid)){
 		$options = array(
-				'type' => 'group',
+        'type' => 'group',
+        'subtype'=> ELGG_ENTITIES_NO_VALUE,
 				'relationship' => 'member',
 				'relationship_guid' => elgg_get_page_owner_guid(),
 				'inverse_relationship' => false,
