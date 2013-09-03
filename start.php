@@ -12,8 +12,8 @@
 
 
 /**
- * 
- * 
+ *
+ *
  * Messages extended init function
  *
  * Register the notification handler and the configuration settings
@@ -28,13 +28,14 @@ function messagesextended_init(){
 	}
 
 	elgg_register_action("messages/send", dirname(__FILE__)."/actions/send.php");
-		
+
 	//@todo Make this configurable
 	$plugin_version = get_plugin_setting("version","messagesextended");
-	if(!$plugin_version || $plugin_version!="1.1"){
+
+	if(!$plugin_version || $plugin_version!="2.0"){
 		messagesextended_configure_users($plugin_version);
 	}
-	
+
 }
 
 /**
@@ -96,7 +97,7 @@ function messages_users_suggest_hook($query){
 	$query_str.= "WHERE owner_guid = ".elgg_get_logged_in_user_guid()." ";
 	$query_str.= "AND name like '%$query%' ";
 	$query_str.= "AND site_guid = " .elgg_get_site_entity()->guid;
-	
+
 	$entities = get_data($query_str);
 	if(!empty($entities)){
 		foreach($entities as $entity){
@@ -104,7 +105,7 @@ function messages_users_suggest_hook($query){
 			$data[]=array('id'=>'c'.$entity->id,'name'=>$name);
 		}
 	}
-	
+
 	return $data;
 }
 register_action("messagesextended/send",false,dirname(__FILE__). "/actions/send.php");
